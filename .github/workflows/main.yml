@@ -34,3 +34,8 @@ jobs:
           INTERVAL: ${{ vars.INTERVAL }}
           TIMEOUT: ${{ vars.TIMEOUT }}
           FILE_TYPE: ${{ vars.FILE_TYPE }}
+      - name: Download Scan Result Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: Qualys_WAS_Scan_Result
+          path: ./scan-results  # Or your target directory
