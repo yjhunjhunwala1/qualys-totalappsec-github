@@ -18,6 +18,7 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
+
 - task: QualysWASConnector@7
   inputs:
     webApplication: '47896333-vuln-bank'
