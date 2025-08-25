@@ -17,3 +17,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: QualysWASConnector@7
+  inputs:
+    webApplication: '47896333-vuln-bank'
+    scanType: 'VULNERABILITY'
+    authenticationRecord: 'Use Default'
+    dataCheckFrequency: '5'
+    waitTimeforScanResult: '60*24'
+    WasService: 'CA'
